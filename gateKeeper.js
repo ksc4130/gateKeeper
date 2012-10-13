@@ -27,11 +27,18 @@ httpProxy.createServer(function (req, res, proxy) {
 			});
 		break;
 		default:
-			res.writeHead(404, { 'Content-Type': 'text/plain' });
-			res.end('404 Page not found');
+			proxy.proxyRequest(req, res, {
+				host: 'localhost',
+				port: 8000
+			});
 	}
 
 }).listen(80);
+
+var fourOfour = http.createServer(function(req, res) {
+	res.writeHead(404, { 'Content-Type': 'text/plain' });
+	res.end('404 Page not found');
+}).listen(8000);
 
 
 
