@@ -2,13 +2,8 @@ var http = require('http'),
  	httpProxy = require('http-proxy'),
  	sys = require('sys');
 
-//
-// Create a proxy server with custom application logic
-//
 httpProxy.createServer(function (req, res, proxy) {
-  //
-  // Put your custom server logic here
-  //
+  console.log(sys.inspect(req.headers.host));
   switch(req.headers.host)
   	{
   		case 'osbrew.com' || 'www.osbrew.com': 
