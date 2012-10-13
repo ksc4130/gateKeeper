@@ -1,8 +1,6 @@
 var http = require('http'),
- 	httpProxy = require('http-proxy');
-
-var http = require('http'),
-    httpProxy = require('http-proxy');
+ 	httpProxy = require('http-proxy'),
+ 	sys = require('sys');
 
 //
 // Create a proxy server with custom application logic
@@ -11,10 +9,22 @@ httpProxy.createServer(function (req, res, proxy) {
   //
   // Put your custom server logic here
   //
-  proxy.proxyRequest(req, res, {
-    host: 'localhost',
-    port: 3000
-  });
+  switch(req.headers.host)
+  	{
+  		'osbrew.com': 
+			proxy.proxyRequest(req, res, {
+				host: 'localhost',
+				port: 3000
+			});
+			break;
+	  	'kyngster.com':
+	  		proxy.proxyRequest(req, res, {
+				host: 'localhost',
+				port: 3001
+			});
+			break;
+  	}
+  
 }).listen(80);
 
 
