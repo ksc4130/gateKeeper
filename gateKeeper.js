@@ -31,6 +31,7 @@ httpProxy.createServer(function (req, res, proxy) {
 				host: 'localhost',
 				port: 8000
 			});
+			break;
 	}
 
 }).listen(80);
