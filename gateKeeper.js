@@ -11,13 +11,13 @@ httpProxy.createServer(function (req, res, proxy) {
   //
   switch(req.headers.host)
   	{
-  		'osbrew.com': 
+  		case 'osbrew.com': 
 			proxy.proxyRequest(req, res, {
 				host: 'localhost',
 				port: 3000
 			});
 			break;
-	  	'kyngster.com':
+	  	case 'kyngster.com':
 	  		proxy.proxyRequest(req, res, {
 				host: 'localhost',
 				port: 3001
