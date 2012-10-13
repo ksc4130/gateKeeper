@@ -11,7 +11,7 @@ httpProxy.createServer(function (req, res, proxy) {
   //
   switch(req.headers.host)
   	{
-  		case 'osbrew.com': 
+  		case 'osbrew.com' || 'www.osbrew.com': 
 			proxy.proxyRequest(req, res, {
 				host: 'localhost',
 				port: 3000
