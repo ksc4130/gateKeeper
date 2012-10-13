@@ -20,12 +20,12 @@ httpProxy.createServer(function (req, res, proxy) {
 				port: 3000
 			});
 			break;
-		case 'kyngster.com':
-			proxy.proxyRequest(req, res, {
-				host: 'localhost',
-				port: 3001
-			});
-		break;
+		// case 'kyngster.com':
+		// 	proxy.proxyRequest(req, res, {
+		// 		host: 'localhost',
+		// 		port: 3001
+		// 	});
+		// break;
 		default:
 			proxy.proxyRequest(req, res, {
 				host: 'localhost',
