@@ -26,6 +26,9 @@ httpProxy.createServer(function (req, res, proxy) {
 				port: 3001
 			});
 		break;
+		default:
+			res.writeHead(404, { 'Content-Type': 'text/plain' });
+			res.end('404 Page not found');
 	}
 
 }).listen(80);
