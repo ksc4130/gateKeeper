@@ -8,6 +8,8 @@ routes['osbrew.com'] = 'osbrew.com';
 routes['www.osbrew.com'] = 'osbrew.com';
 routes['kyngster.com'] = 'kyngster.com';
 routes['www.kyngster.com'] = 'kyngster.com';
+routes['ellsworthwellandpump.com'] = 'ellsworthwellandpump.com';
+routes['www.ellsworthwellandpump.com'] = 'ellsworthwellandpump.com';
 
 httpProxy.createServer(function (req, res, proxy) {
 	console.log(sys.inspect(req.headers.host));
@@ -24,6 +26,12 @@ httpProxy.createServer(function (req, res, proxy) {
 			proxy.proxyRequest(req, res, {
 				host: 'localhost',
 				port: 3001
+			});
+		break;
+        case 'ellsworthwellandpump.com':
+			proxy.proxyRequest(req, res, {
+				host: 'localhost',
+				port: 3000
 			});
 		break;
 		default:
