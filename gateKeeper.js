@@ -31,13 +31,13 @@ httpProxy.createServer(function (req, res, proxy) {
         case 'ellsworthwellandpump.com':
 			proxy.proxyRequest(req, res, {
 				host: 'localhost',
-				port: 3000
+				port: 3002
 			});
 		break;
 		default:
 			proxy.proxyRequest(req, res, {
 				host: 'localhost',
-				port: 8000
+				port: 3000
 			});
 			break;
 	}
