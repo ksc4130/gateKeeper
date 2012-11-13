@@ -8,6 +8,8 @@ routes['osbrew.com'] = 'osbrew.com';
 routes['www.osbrew.com'] = 'osbrew.com';
 routes['kyngster.com'] = 'kyngster.com';
 routes['www.kyngster.com'] = 'kyngster.com';
+routes['rims.kyngster.com'] = 'rims.kyngster.com';
+routes['www.rims.kyngster.com'] = 'rims.kyngster.com';
 routes['ellsworthwellandpump.com'] = 'ellsworthwellandpump.com';
 routes['www.ellsworthwellandpump.com'] = 'ellsworthwellandpump.com';
 routes['marionflywheels.com'] = 'marionflywheels.com';
@@ -40,6 +42,12 @@ httpProxy.createServer(function (req, res, proxy) {
 			proxy.proxyRequest(req, res, {
 				host: 'localhost',
 				port: 3003
+			});
+		break;
+        case 'rims.kyngster.com':
+			proxy.proxyRequest(req, res, {
+				host: 'localhost',
+				port: 3004
 			});
 		break;
 		default:
