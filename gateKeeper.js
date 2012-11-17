@@ -12,6 +12,9 @@ routes['ellsworthwellandpump.com'] = 'ellsworthwellandpump.com';
 routes['www.ellsworthwellandpump.com'] = 'ellsworthwellandpump.com';
 routes['marionflywheels.com'] = 'marionflywheels.com';
 routes['www.marionflywheels.com'] = 'marionflywheels.com';
+routes['tims.kyngster.com'] = 'rims.kyngster.com';
+routes['test.kyngster.com'] = 'test.kyngster.com';
+
 
 httpProxy.createServer(function (req, res, proxy) {
 	console.log(sys.inspect(req.headers.host));
