@@ -48,7 +48,7 @@ httpProxy.createServer(function (req, res, proxy) {
 				port: 3004
 			});
 		break;
-        case 'rims.kyngster.com':
+        case 'test.kyngster.com':
 			proxy.proxyRequest(req, res, {
 				host: 'localhost',
 				port: 4130
