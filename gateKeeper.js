@@ -14,6 +14,7 @@ routes['marionflywheels.com'] = 'marionflywheels.com';
 routes['www.marionflywheels.com'] = 'marionflywheels.com';
 routes['tims.kyngster.com'] = 'rims.kyngster.com';
 routes['test.kyngster.com'] = 'test.kyngster.com';
+routes['node.kyngster.com'] = 'node.kyngster.com';
 
 
 httpProxy.createServer(function (req, res, proxy) {
@@ -55,6 +56,12 @@ httpProxy.createServer(function (req, res, proxy) {
 			proxy.proxyRequest(req, res, {
 				host: 'localhost',
 				port: 4130
+			});
+		break;
+        case 'node.kyngster.com':
+			proxy.proxyRequest(req, res, {
+				host: 'localhost',
+				port: 3009
 			});
 		break;
 		default:
